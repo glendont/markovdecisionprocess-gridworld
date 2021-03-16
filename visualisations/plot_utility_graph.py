@@ -25,5 +25,5 @@ def plot_utility_graph(num_iterations,U_iterations,title):
     plt.xticks(fontsize=25)
 
     title= title.replace(" ", "")
-    plt.savefig('output/' + title + '2.png')
+    plt.savefig('output/' + title + '.png')
     plt.show()
