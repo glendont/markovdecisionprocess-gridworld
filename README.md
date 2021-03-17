@@ -9,9 +9,9 @@ Grid  World  is  a  2D  rectangular  grid  of  size  Ny,  Nx  (in  our  case,  N
 
 Referring to the diagram above, there are 4 types of grid squares: 
 1)  Green  square:  Landing  on  this  square  results  in  the  agent  receiving  a  positive 1 reward
-2) Brown Square: Landing on this square results in the agent receiving a negative 1reward
-3) White Square: Landing on this square has no effect on the agent in terms of rewardand
-4) Gray Square/Wall: This square serves as an obstacle - the agent cannot move intothis grid square
+2) Brown Square: Landing on this square results in the agent receiving a negative 1 reward
+3) White Square: Landing on this square has no effect on the agent in terms of reward
+4) Gray Square/Wall: This square serves as an obstacle - the agent cannot move into this grid square
 
 ## Executing the Program
 The program can be accessed by executing the python file main.py. The relevant functions for maze creation, executing the optimal policy algorithmsand generating visualisations from the algorithms are imported and invoked from thiscentral location.
