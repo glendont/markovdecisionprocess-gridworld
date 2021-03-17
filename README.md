@@ -5,9 +5,13 @@
 
 <p align="center"><img src="images/grid.png" width="500" height="350"/>
 
-Grid  World  is  a  2D  rectangular  grid  of  size  Ny,  Nx  (in  our  case,  Nx=6  and  Ny=6grid) with an agent starting off at one grid square. The agent will take actions in theform of directional steps (up, down, left, or right) to move to an adjacent grid squarewithin the environment of the rectangular grid
+Grid  World  is  a  2D  rectangular  grid  of  size  Ny,  Nx  (in  our  case,  Nx=6  and  Ny=6grid) with an agent starting off at one grid square. The agent will take actions in theform of directional steps (up, down, left, or right) to move to an adjacent grid square within the environment of the rectangular grid.
 
-Referring to the diagram above, there are 4 types of grid squares:1)  Green  square:  Landing  on  this  square  results  in  the  agent  receiving  a  posi-tive 1 reward2) Brown Square: Landing on this square results in the agent receiving a negative 1reward3) White Square: Landing on this square has no effect on the agent in terms of rewardand4) Gray Square/Wall: This square serves as an obstacle - the agent cannot move intothis grid square
+Referring to the diagram above, there are 4 types of grid squares: 
+1)  Green  square:  Landing  on  this  square  results  in  the  agent  receiving  a  positive 1 reward
+2) Brown Square: Landing on this square results in the agent receiving a negative 1reward
+3) White Square: Landing on this square has no effect on the agent in terms of rewardand
+4) Gray Square/Wall: This square serves as an obstacle - the agent cannot move intothis grid square
 
 ## Executing the Program
 The program can be accessed by executing the python file main.py. The relevant functions for maze creation, executing the optimal policy algorithmsand generating visualisations from the algorithms are imported and invoked from thiscentral location.
