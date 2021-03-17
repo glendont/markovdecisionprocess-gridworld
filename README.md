@@ -9,6 +9,8 @@ Grid  World  is  a  2D  rectangular  grid  of  size  Ny,  Nx  (in  our  case,  N
 
 Referring to the diagram above, there are 4 types of grid squares:1)  Green  square:  Landing  on  this  square  results  in  the  agent  receiving  a  posi-tive 1 reward2) Brown Square: Landing on this square results in the agent receiving a negative 1reward3) White Square: Landing on this square has no effect on the agent in terms of rewardand4) Gray Square/Wall: This square serves as an obstacle - the agent cannot move intothis grid square
 
+## Executing the Program
+The program can be accessed by executing the python file main.py. The relevant functions for maze creation, executing the optimal policy algorithmsand generating visualisations from the algorithms are imported and invoked from thiscentral location.
 
 ## Source Code Functionality  
 `main.py`
@@ -38,15 +40,13 @@ Referring to the diagram above, there are 4 types of grid squares:1)  Green  squ
 `plot_utility_graph.py`
 > Responsible for the generation of graphs to visualise the trend of utility estimates as a function of number of iterations. 
 
-
-
-## 8. Authors
+## Authors
 
 * Glendon Thaiw ([GitHub](https://github.com/glendont) | [LinkedIn](https://www.linkedin.com/in/glendonthaiw/))
 
-## 10. References
+## References
 
 This project references the following libraries to put together the solution:
 
-- [python-docx-0.8.10](https://python-docx.readthedocs.io/en/latest/)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
 
