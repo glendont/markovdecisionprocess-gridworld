@@ -53,7 +53,8 @@ def vary_mazesize(algorithm):
     run_times=[]
     iterations_to_convergence=[]
 
-    for i in range(6,20):
+    for i in range(6,8):
+        print("Please hold, the analysis is ongoing...")
         bigger_grid = generate_maze(i,"none")
         maze3a = Maze(bigger_grid, REWARD_MAP, DISCOUNT)
         start = time.time()
@@ -108,6 +109,7 @@ def vary_complexity(algorithm):
     num_iterations_list=[]
 
     for p_green in numpy.arange(0,1.1,0.1):
+        print("Please hold, the analysis is ongoing...")
         bigger_grid = generate_maze(10,p_green)
         maze3a = Maze(bigger_grid, REWARD_MAP, DISCOUNT)
         start = time.time()
@@ -146,7 +148,6 @@ def vary_complexity(algorithm):
     labels = []
     plt.plot(p_green_list, num_iterations_list)
     plt.axis([min(p_green_list), max(p_green_list), min(num_iterations_list), max(num_iterations_list) + 10])
-    plt.show()
 
     plt.xlabel('Complexity of Maze (Probability of Green Square)', fontsize=20)
     plt.ylabel('Number of iterations to Convergence', fontsize=20)

@@ -13,15 +13,10 @@ from visualisations.grid_visualisation import grid_visualisation
 
 import time
 import numpy
-import threading
-
-def wait_message():
-  threading.Timer(10, wait_message).start()
-  print("Please hold, the analysis is ongoing...")
 
 if __name__ == '__main__':
     print("*********************************************************************************************************")
-    print("Hello there, welcome to GridWorld! We will use this to illustrate the Markov Decision Process.")
+    print("     Hello there, welcome to GridWorld! We will use this to illustrate the Markov Decision Process.")
     print("*********************************************************************************************************")
 
     print("Maze Creation")
@@ -45,7 +40,7 @@ if __name__ == '__main__':
             print("Optimal Policy found!")
             print("Choose the following options:")
 
-            option_input = input("1. Grid Visualisations \n2. Utilities of all states \n3. Visualise Plot of Utility Estimates as a function of the number of iterations\n")
+            option_input = input("1. Grid Visualisations \n2. Utilities of all states \n3. Visualise Plot of Utility Estimates as a function of the number of iterations\n4. All of the above\n")
             if (option_input=="1"):
                 grid_visualisation(optimal_policy, maze.grid, "policy")
                 grid_visualisation(final_state_utilities,maze.grid,"utilities")
@@ -53,6 +48,12 @@ if __name__ == '__main__':
                 print_utilities(final_state_utilities, num_iterations, algorithm="valueiteration")
             elif(option_input=="3"):
                 plot_utility_graph(num_iterations, U_iterations, title="Value Iteration")
+            elif(option_input=="4"):
+                grid_visualisation(optimal_policy, maze.grid, "policy")
+                grid_visualisation(final_state_utilities,maze.grid,"utilities")
+                print_utilities(final_state_utilities, num_iterations, algorithm="valueiteration")
+                plot_utility_graph(num_iterations, U_iterations, title="Value Iteration")
+
         elif(algorithm_input=="2"):
             print("Running Policy Iteration Algorithm...")
             policy_iteration_res = policy_iteration(maze, K)
@@ -66,7 +67,7 @@ if __name__ == '__main__':
             num_iterations = algorithm_output['num_iterations']
 
             print("Choose the following options:")
-            option_input = input("1. Grid Visualisations \n2. Utilities of all states \n3. Visualise Plot of Utility Estimates as a function of the number of iterations\n")
+            option_input = input("1. Grid Visualisations \n2. Utilities of all states \n3. Visualise Plot of Utility Estimates as a function of the number of iterations\n4. All of the above\n")
             if (option_input=="1"):
                 grid_visualisation(optimal_policy, maze.grid, "policy")
                 grid_visualisation(final_state_utilities,maze.grid,"utilities")
@@ -74,18 +75,21 @@ if __name__ == '__main__':
                 print_utilities(final_state_utilities, num_iterations, algorithm="policyiteration")
             elif(option_input=="3"):
                 plot_utility_graph(num_iterations, U_iterations, title="Policy Iteration")
+            elif(option_input=="4"):
+                grid_visualisation(optimal_policy, maze.grid, "policy")
+                grid_visualisation(final_state_utilities,maze.grid,"utilities")
+                print_utilities(final_state_utilities, num_iterations, algorithm="policyiteration")
+                plot_utility_graph(num_iterations, U_iterations, title="Policy Iteration")
 
     elif (maze_input=="2"):
         print("Initialising a more complicated maze environment...")
         print("Select the following optimal policy algorithms")
         algorithm_input = input("1. Value Iteration Algorithm \n2. Policy Iteration Algorithm \n")
         if(algorithm_input=="1"):
-            wait_message()
             vary_mazesize(algorithm="valueiteration")
             vary_complexity(algorithm="valueiteration")
             print("Analysis complete!")
         elif(algorithm_input=="2"):
-            wait_message()
             vary_complexity(algorithm="policyiteration")
             vary_mazesize(algorithm="policyiteration")
             print("Analysis complete!")
