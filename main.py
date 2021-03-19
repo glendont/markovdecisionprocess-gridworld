@@ -18,22 +18,22 @@ if __name__ == '__main__':
     ######################################################################
     # 1. Value Iteration Algorithm
     ######################################################################
-    # # Initialise a maze environment
-    # maze1 = Maze(GRID, REWARD_MAP, DISCOUNT)
-    #
-    # # Run Value Iteration Algorithm
-    # value_iteration_res = value_iteration(maze1)
-    #
-    # # Extract outputs from Value Iteration Algorithm
-    # final_state_utilities = value_iteration_res['U_current']
-    # optimal_policy = value_iteration_res['optimal_policy']
-    # U_iterations = value_iteration_res['U_iterations']
-    # num_iterations = value_iteration_res['num_iterations']
-    #
-    # # Visualise Outputs
+    # Initialise a maze environment
+    maze1 = Maze(GRID, REWARD_MAP, DISCOUNT)
+
+    # Run Value Iteration Algorithm
+    value_iteration_res = value_iteration(maze1)
+
+    # Extract outputs from Value Iteration Algorithm
+    final_state_utilities = value_iteration_res['U_current']
+    optimal_policy = value_iteration_res['optimal_policy']
+    U_iterations = value_iteration_res['U_iterations']
+    num_iterations = value_iteration_res['num_iterations']
+
+    # Visualise Outputs
     # grid_visualisation(optimal_policy, maze1.grid, "policy")
     # grid_visualisation(final_state_utilities,maze1.grid,"utilities")
-    # print_utilities(final_state_utilities, num_iterations, algorithm="valueiteration")
+    print_utilities(final_state_utilities, num_iterations, algorithm="valueiteration")
     # plot_utility_graph(num_iterations, U_iterations, title="Value Iteration")
 
     ######################################################################
