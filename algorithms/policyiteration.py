@@ -20,8 +20,6 @@ def policy_iteration(mdp, k):
         utilities, new_iteration_utilities = policy_evaluation(policies, utilities, mdp, k)
         policies, unchanged = policy_improvement(mdp, utilities, policies, unchanged)
         num_iterations += 1
-        print("Iteration: " + str(num_iterations))
-
         for state in mdp.states:
             U_iterations[state].extend(new_iteration_utilities[state])
 
