@@ -4,13 +4,11 @@ from model.MDP import MDP
 class Maze(MDP):
     """
     Maze is a 2D square array where each square can take different values.
-
     Possible squares:
         - ' ': white
         - 'G': green
         - 'B': brown
         - 'W': wall
-
     """
     def __init__(self, grid, reward_map, discount):
         """

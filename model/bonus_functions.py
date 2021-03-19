@@ -1,11 +1,12 @@
-import random
-import time
 from model.Maze import Maze
 from model.constants import *
 from algorithms.valueiteration import value_iteration
 from algorithms.policyiteration import policy_iteration
+
 import matplotlib.pyplot as plt
 import numpy
+import random
+import time
 
 # PROBABILITY VARIABLES FOR DIFFERENT STATE TYPES - CAN ADJUST TO CHANGE COMPLEXITY
 # MUST SUM TO 1

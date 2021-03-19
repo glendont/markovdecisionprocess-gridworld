@@ -23,7 +23,6 @@ def print_utilities(U_iterations, num_iterations, algorithm):
         print("K","\t\t\t\t\t\t",":", K)
         print("Number of Iterations","\t",":", num_iterations)
 
-
     print("***********************************")
     print("Utility Values of all States")
     print("***********************************")
