@@ -4,13 +4,12 @@ import random
 
 def policy_iteration(mdp, k):
     utilities, policies = {}, {}
-
-    # Supplementary dictionaries for visualisation
+    # Local dictionaries for visualisation
     U_iterations = {}
 
     for state in mdp.states:
         utilities[state] = 0
-        policies[state] = mdp.actions[random.randint(0, 3)]  # the number will correspond to an action
+        policies[state] = mdp.actions[random.randint(0, 3)]  # Randomise initial policy
         U_iterations[state] = [0]
 
     unchanged = False
