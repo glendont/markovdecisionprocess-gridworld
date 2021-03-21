@@ -13,8 +13,8 @@ def value_iteration(mdp):
         num_iterations - total number of iterations till convergence
     """
     # LOCAL VARIRABLES - dictionary of utilities for states and maximum change in utility at any iteration
-    U_current, U_next = {}, {}  # U, U 
-    max_utility_change = 0  # δ
+    U_current, U_next = {}, {}
+    max_utility_change = 0
 
     # Supplementary dictionaries for visualisation
     U_iterations, optimal_policy = {}, {}
