@@ -12,7 +12,6 @@ def value_iteration(mdp):
         optimal_policy - best action at each state
         num_iterations - total number of iterations till convergence
     """
-
     # LOCAL VARIRABLES - dictionary of utilities for states and maximum change in utility at any iteration
     U_current, U_next = {}, {}  # U, U 
     max_utility_change = 0  # δ
